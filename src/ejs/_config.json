@@ -1,0 +1,15 @@
+{
+  "default": {
+    "lang": "ja",
+    "charset": "UTF-8",
+    "title": "松川接骨院 | 松川はり治療院",
+    "description": "Et consectetur tempor amet ullamco et.",
+    "keywords": "",
+    "author": "matsuda",
+    "publicPath": "http://localhost:8080",
+    "analytics": "",
+    "twitter": "@",
+    "facebook": "",
+    "instagram": ""
+  }
+}

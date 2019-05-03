@@ -1,0 +1,82 @@
+<%- include('../_common/_head', {
+  key: 'お問い合わせ',
+  pagetitle: 'お問い合わせ',
+}) %>
+
+<div id="wrapper">
+
+
+  <%- include('../_component/_sub-header') %>
+  <%- include('../_component/_global-navi') %>
+    
+  <div class="sub-mainvisual contact-visual">
+    <h1>
+        <div><span>お問い合わせ</span></div>
+    </h1>
+  </div>
+
+  <div class="content cf">
+
+      <div class="sub-content">
+
+        <h3><span>お問い合わせ</span></h3>
+        <form data-toggle="validator" role="form">
+          <div class="form-group has-feedback">
+            <label for="inputName" class="control-label">
+                名前　<small class="label label-danger">必須項目</small>
+            </label>
+            <input type="text" class="form-control" id="inputName" placeholder="松川 太郎" data-required-error="名前の入力は必須です" required>
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group has-feedback">
+            <label for="inputLINE" class="control-label">
+              LINEアカウント　<small class="label">任意</small>
+            </label>
+            <div class="input-group">
+              <input type="text" pattern="^[_A-z0-9]{1,}$" maxlength="30" class="form-control" id="inputLine" placeholder="matsukawa32111" data-pattern-error="英数字以外の文字が入力されています">
+            </div>
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group has-feedback">
+            <label for="inputEmail" class="control-label">
+                メールアドレス　<small class="label label-danger">必須項目</small>
+            </label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="matsukawa@gmail.com" data-error="メールアドレスが正しく入力されておりません" data-required-error="メールアドレスの入力は必須です" required>
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group has-feedback">
+            <label for="inputTextarea" class="control-label">
+                ご質問内容　<small class="label label-danger">必須項目</small>
+            </label>
+            <textarea class="form-control" id="inputTextarea" placeholder="（例）腰痛の治療も可能でしょうか？" data-required-error="ご質問内容の入力は必須です" minlength="2" rows="3" required></textarea>
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group box-submit">
+            <button type="submit" class="btn btn-primary">送信</button>
+          </div>
+        </form>
+      </div>
+
+      <section class="line content__box bg-image">
+        <div class="line__inner">
+          <div class="content__box__inner">
+              <dl class="content__box__list">
+                <dt class="content__box__img"><figure></figure></dt>
+                <dd class="content__box__text">お気軽にLINEで<br>お問い合わせください。</dd>
+              </dl>
+          </div>
+        </div>
+      </section>
+
+  </div>
+  
+  <%- include('../_component/_footer') %>
+
+</div>
+
+
+<%- include('../_common/_foot') %>

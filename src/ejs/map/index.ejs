@@ -1,0 +1,85 @@
+<%- include('../_common/_head', {
+  key: '診療時間・地図',
+  pagetitle: '診療時間・地図',
+}) %>
+
+<div id="wrapper">
+
+  <%- include('../_component/_sub-header') %>
+  <%- include('../_component/_global-navi') %>
+    
+  <div class="sub-mainvisual map-visual">
+    <h1>
+        <div><span>診療時間・地図</span></div>
+    </h1>
+  </div>
+
+  <div class="sub-content">
+    
+    <div class="map">
+      <section class="map__open">
+        <h3><span>診療時間</span></h3>
+        <table class="map__open__tbl">
+          <tr class="thead">
+            <th></th>
+            <th>日曜日</th>
+            <th>月曜日</th>
+            <th>火曜日</th>
+            <th>水曜日</th>
+            <th>木曜日</th>
+            <th>金曜日</th>
+            <th>土曜日</th>
+          </tr>
+          <tr>
+            <td>午前<br>9:00-13:00</td>
+            <td data-label="日曜日">×</td>
+            <td data-label="月曜日">○</td>
+            <td data-label="火曜日">○</td>
+            <td data-label="水曜日">○</td>
+            <td data-label="木曜日">○</td>
+            <td data-label="金曜日">○</td>
+            <td data-label="土曜日">○</td>
+          </tr>
+          <tr>
+            <td>午後<br>15:00-19:00</td>
+            <td data-label="日曜日">×</td>
+            <td data-label="月曜日">○</td>
+            <td data-label="火曜日">○</td>
+            <td data-label="水曜日">×</td>
+            <td data-label="木曜日">○</td>
+            <td data-label="金曜日">○</td>
+            <td data-label="土曜日">○</td>
+          </tr>
+        </table>
+        <p class="mt-3">※お電話、LINE、ご予約等をいただけたら19時以降でもご対応いたします。</p>
+      </section>
+
+      <section class="map__discription">
+        <h3><span>松川接骨院の場所</span></h3>
+        <iframe class="map__discription__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d809.7753557163514!2d139.63879358810934!3d35.72372409875547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018ed0cced4c303%3A0xd704a82d9ccae236!2z5p2-5bed5o6l6aqo6Zmi!5e0!3m2!1sja!2sjp!4v1556708271745!5m2!1sja!2sjp" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </section>
+
+    </div>
+  </div>
+  
+  <div class="content cf">
+
+    <section class="line content__box bg-image">
+      <div class="line__inner">
+        <div class="content__box__inner">
+            <dl class="content__box__list">
+              <dt class="content__box__img"><figure></figure></dt>
+              <dd class="content__box__text">お気軽にLINEで<br>お問い合わせください。</dd>
+            </dl>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <%- include('../_component/_footer') %>
+
+</div>
+
+
+<%- include('../_common/_foot') %>
