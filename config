@@ -5,6 +5,5 @@
 	ignorecase = true
 	precomposeunicode = true
 	sharedrepository = 1
-	excludesfile = /Users/matsuda_masami/.gitignore_global
 [receive]
 	denyNonFastforwards = true
