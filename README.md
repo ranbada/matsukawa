@@ -25,6 +25,7 @@ $ yarn build
 もしくわ
 ```
 $ gulp build
+```
 
 ## gitの設定について
 hooksは一応置いていますが設定してません。
