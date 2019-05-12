@@ -41,3 +41,9 @@ dist
 dist
 public/assets/css/style.css
 public/assets/js/common.js
+
+# db_data
+db_data/
+
+# DS_Store
+.DS_Store

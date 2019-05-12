@@ -36,6 +36,7 @@ const _config = {
     },
     public: './public',
     dist: './dist',
+    prod: './wordpress',
   },
   browserSync: {
     open: false,
@@ -195,5 +196,45 @@ gulp.task('build', () => {
     'minifyHtml',
     'minifyJs',
     'minifyCss'
+  );
+});
+
+/* copyProd */
+gulp.task('copyProd', () => {
+  return gulp
+    .src(`${_config.path.public}/assets/**`, {
+      base: _config.path.public
+    })
+    .pipe(gulp.dest(_config.path.prod));
+});
+
+/* minify js */
+gulp.task('minifyJsProd', () => {
+  if (_config.minify.js) {
+    return gulp
+      .src(`${_config.path.prod}/assets/**/*.js`)
+      .pipe(uglify({
+        preserveComments: 'some'
+      }))
+      .pipe(gulp.dest(`${_config.path.prod}/assets/`));
+  }
+});
+
+/* minify css */
+gulp.task('minifyCssProd', () => {
+  if (_config.minify.css) {
+    return gulp
+      .src(`${_config.path.prod}/assets/**/*.css`)
+      .pipe(cssmin())
+      .pipe(gulp.dest(`${_config.path.prod}/assets/`));
+  }
+});
+
+/* prod */
+gulp.task('prod', () => {
+  runSequence(
+    'copyProd',
+    'minifyJsProd',
+    'minifyCssProd'
   );
 });
