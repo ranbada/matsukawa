@@ -3,7 +3,8 @@
   "version": "1.0.8",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "prod": "gulp prod"
   },
   "author": "matsuda",
   "license": "MIT",
